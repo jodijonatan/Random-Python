@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 import mediapipe as mp
 
-# Inisialisasi MediaPipe Hands
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(min_detection_confidence=0.8, min_tracking_confidence=0.5)
 mp_draw = mp.solutions.drawing_utils
