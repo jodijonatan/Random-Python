@@ -39,23 +39,18 @@ while cap.isOpened():
             # Gambar lingkaran di ujung jari
             cv2.circle(frame, (x, y), 10, colors[color_index], -1)
             
-            # Menggambar di kanvas jika jari diangkat
             cv2.circle(canvas, (x, y), 5, colors[color_index], -1)
             
-            # Pindah warna jika jari jempol diangkat
             thumb_tip = hand_landmarks.landmark[4]
             thumb_x, thumb_y = int(thumb_tip.x * w), int(thumb_tip.y * h)
             if abs(thumb_x - x) < 50 and abs(thumb_y - y) < 50:
-                color_index = (color_index + 1) % len(colors)  # Ganti warna
-                cv2.waitKey(500)  # Hindari perubahan warna yang terlalu cepat
+                color_index = (color_index + 1) % len(colors)
+                cv2.waitKey(500)
     
-    # Gabungkan frame dan kanvas
     frame = cv2.addWeighted(frame, 1, canvas, 0.5, 0)
     
-    # Tampilkan hasil
     cv2.imshow("Virtual Paint", frame)
     
-    # Keluar jika tombol 'q' ditekan
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
