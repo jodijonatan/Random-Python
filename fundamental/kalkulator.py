@@ -60,9 +60,7 @@ def sama_dengan():
         hasil = angka_sekarang * angka_kedua
         E1.delete(0, END)
         E1.insert(0, hasil)
-                                                                                                      
-
-                                                                                                      
+                                                            
 E1=Entry(root)
 E1.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 

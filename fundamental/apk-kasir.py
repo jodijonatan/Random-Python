@@ -7,7 +7,7 @@ harga=0
 pilihan=int(input("Tentukan Pilihan"))
 if pilihan==1:
     print("Anda membeli milk coffee= $7")
-    harga+=5
+    harga+=7
 elif pilihan==2:
     print("Anda membeli chocolate= $5")
     harga+=5
@@ -20,8 +20,8 @@ elif pilihan==4:
 else:
     print("Pilihan tidak tersedia")
 bayar=int(input("Tentukan nominal pembayaran= $"))
-kembalian:print("Kembalian= $",(bayar-harga))
-if bayar>harga:
+if bayar >= harga:
+    print("Kembalian= $", bayar - harga)
     print("Terima kasih telah berbelanja")
-elif bayar<harga:
+else:
     print("Uang anda tidak mencukupi")

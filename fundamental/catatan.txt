@@ -1,0 +1,4 @@
+file yang bermasalah:
+- arduino
+- camera
+- image

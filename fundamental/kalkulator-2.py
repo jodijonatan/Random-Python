@@ -61,4 +61,3 @@ for (text, row, col) in buttons:
     button.grid(row=row, column=col, padx=10, pady=10)
 
 root.mainloop()
-k
