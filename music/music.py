@@ -4,6 +4,7 @@ import pygame
 
 lyrics_timing = [
     (0, "I Know I have a fickle heart and a bitterness"),       
+    
     (5, "And a wandering eye, and heaviness in my head"),   
     (12, "but DON'T YOU REMEMBER?"),     
     (21, "DON'T YOU REMEMBER?"),
